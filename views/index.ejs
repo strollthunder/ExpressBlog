@@ -1,0 +1,33 @@
+<%- include header %>
+
+
+
+<div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+
+    <hr class="featurette-divider">
+
+    <!-- START THE FEATURETTES -->
+    <% posts.forEach(function (post, index) { %>
+
+
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading"><%= post.title %><span class="text-muted"> -- <%= post.name %></span></h2>
+            <p class="lead"><%- post.post %></p>
+        </div>
+        <div class="col-md-5">
+            <%= post.time.minute %>
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <% }) %>
+
+    <!-- /END THE FEATURETTES -->
+
+
+<%- include footer %>
